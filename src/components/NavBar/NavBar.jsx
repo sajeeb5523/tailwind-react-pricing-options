@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from './Link';
 
 const navigationData = [
     {
@@ -33,13 +34,21 @@ const Navbar = () => {
     return (
         <nav>
 
+
+
             <ul className='flex'>
+                {
+                    navigationData.map((route) => <Link key={route.id} route={route}></Link>)
+                }
+            </ul>
+
+            {/* <ul className='flex'>
                 {
                     navigationData.map(route =><li className='mr-10'>
                         <a href={route.path}>{route.name}</a>
                         </li>)
                 }
-            </ul>
+            </ul> */}
 
 
 
